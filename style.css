@@ -1,0 +1,43 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 65px;
+}
+.h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+.p, li, a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+body {
+    background-color: #0C0950;
+    transition: background-color 0.5s, color 0.5s;
+}
+.Home {
+    background-color: #FFFADC;
+}
+.EVs {
+    background-color: #B6F500;
+}
+.AI {
+    background-color: #03346E;
+    color: white
+}
+.Space {
+    background-color: #261FB3;
+    color: rgb(170, 184, 202);
+}
+.footer {
+    background-color: #0C0950;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+.My-footer {
+    background-color: #0C0950;
+}
