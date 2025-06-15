@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                margin:0;
+                height:100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* background-color: black; */
+                background-image: url('space.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                background-size: 100% 100%;
+                overflow: hidden;
+            }
+            .container {
+                font-size: 10px;
+                height: 40em;
+                width: 40em;
+                position: relative;
+            }
+            .sun {
+                position: absolute;
+                top: 15em;
+                left: 15em;
+                width: 10em;
+                height: 10em;
+                background-color: yellow;
+                border-radius: 50%;
+                box-shadow: 0 0 3em white;
+            }
+            .earth, .moon {
+                position: absolute;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+            }    
+            @keyframes orbit {
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+            .earth {
+                top: 5em;
+                right: 5em;
+                width: 30em;
+                height: 30em;
+                animation: orbit 16s linear infinite;
+            }
+            .moon {
+                top: 1em;
+                right: 1em;
+                width: 6em;
+                height: 6em;
+                animation: orbit 2.7s linear infinite;
+            }
+            .mars {
+                position: absolute;
+                top: -3em;        /* xa hơn Trái Đất */
+                right: -3em;
+                width: 44em;
+                height: 44em;
+                border-style: solid;
+                border-color: red transparent transparent transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+                animation: orbit 20s linear infinite; /* Mars quay lâu hơn Earth */
+            }
+            .venus {
+                position: absolute;
+                top: 10em;        /* gần hơn Trái Đất */
+                right: 10em;
+                width: 20em;
+                height: 20em;
+                border-style: solid;
+                border-color: rgb(255, 196, 0) transparent transparent transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+                animation: orbit 10s linear infinite; 
+            }
+            .mercury {
+                position: absolute;
+                top: 13.5em;
+                right: 13em;
+                width: 14em;
+                height: 14em;
+                border-style: solid;
+                border-color: gray transparent transparent transparent;
+                border-width: 0.1em 0.1em 0 0;
+                border-radius: 50%;
+                animation: orbit 5s linear infinite; /* Mercury quay nhanh nhất */
+            }
+            .mercury::before {
+                content: '';
+                position: absolute;
+                top: 1.4em;
+                right: 1.4em;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: gray;
+                border-radius: 50%;
+            }
+
+            .venus::before {
+                content:'';
+                position: absolute;
+                top: 1.8em;
+                right: 1.8em;
+                width: 2.2em;
+                height: 2.2em;
+                background-color: rgb(255, 196, 0);
+                border-radius: 50%;
+            }
+
+            .mars::before {
+                content: '';
+                position: absolute;
+                top: 5.4em;
+                right: 5.4em;
+                width: 2em;
+                height: 2em;
+                background-color: orangered;
+                border-radius: 50%;
+            }
+
+            .earth::before,
+            .moon::before {
+                content:'';
+                position: absolute;
+                border-radius: 50%;
+            }
+            .earth::before {
+                top: 2.8em;
+                right: 2.8em;
+                width: 3em;
+                height: 3em;
+                background-color: aqua; 
+            }
+            .moon::before {
+                top: 0.2em;
+                right: 0.2em;
+                width: 1.2em;
+                height: 1.2em;
+                background-color: silver;
+            }
+            .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="sun"></div>
+                <div class="earth">
+                    <div class="moon"></div>
+                </div>
+                <div class="mars"></div>
+                <div class="venus"></div>
+                <div class="mercury"></div>
+        </div>
+    
+        <script>
+            setTimeout(() => {
+                const container = document.querySelector('.container');
+                container.classList.add('fade-out');
+                setTimeout(()=> {
+                    window.location.href='Web.html';
+                },1500); // Wait 1s for the fade-out effect to complete before redirecting
+            }, 10000); // Wait 5 seconds before start fade-out effect
+        </script>
+    </body>
+</html>
