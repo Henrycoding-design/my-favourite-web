@@ -8,7 +8,6 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                /* background-color: black; */
                 background-image: url('space.jpg');
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -49,18 +48,18 @@
                 right: 5em;
                 width: 30em;
                 height: 30em;
-                animation: orbit 16s linear infinite;
+                animation: orbit 12s linear infinite;
             }
             .moon {
                 top: 1em;
                 right: 1em;
                 width: 6em;
                 height: 6em;
-                animation: orbit 2.7s linear infinite;
+                animation: orbit 1.2s linear infinite;
             }
             .mars {
                 position: absolute;
-                top: -3em;        /* xa hơn Trái Đất */
+                top: -3em;
                 right: -3em;
                 width: 44em;
                 height: 44em;
@@ -68,11 +67,11 @@
                 border-color: red transparent transparent transparent;
                 border-width: 0.1em 0.1em 0 0;
                 border-radius: 50%;
-                animation: orbit 20s linear infinite; /* Mars quay lâu hơn Earth */
+                animation: orbit 15s linear infinite;
             }
             .venus {
                 position: absolute;
-                top: 10em;        /* gần hơn Trái Đất */
+                top: 10em;
                 right: 10em;
                 width: 20em;
                 height: 20em;
@@ -80,7 +79,7 @@
                 border-color: rgb(255, 196, 0) transparent transparent transparent;
                 border-width: 0.1em 0.1em 0 0;
                 border-radius: 50%;
-                animation: orbit 10s linear infinite; 
+                animation: orbit 7s linear infinite; 
             }
             .mercury {
                 position: absolute;
@@ -92,7 +91,7 @@
                 border-color: gray transparent transparent transparent;
                 border-width: 0.1em 0.1em 0 0;
                 border-radius: 50%;
-                animation: orbit 5s linear infinite; /* Mercury quay nhanh nhất */
+                animation: orbit 4s linear infinite;
             }
             .mercury::before {
                 content: '';
@@ -171,8 +170,8 @@
                 container.classList.add('fade-out');
                 setTimeout(()=> {
                     window.location.href='Web.html';
-                },1500); // Wait 1s for the fade-out effect to complete before redirecting
-            }, 10000); // Wait 5 seconds before start fade-out effect
+                },1000);
+            }, 8000);
         </script>
     </body>
 </html>
